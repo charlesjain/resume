@@ -264,11 +264,11 @@ h6 {
 }
 
 /* ==========================================================
-   TABLET + DESKTOP (768px and above)
-   Icon-only sidebar with expand on hover
+   TABLET (768px – 1199px)
+   Icon-only sidebar with hover expand
 ========================================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
 
   .header {
     width: 90px;
@@ -281,7 +281,7 @@ h6 {
     transition: margin-left 0.3s ease;
   }
 
-  /* Default: icon only */
+  /* Default icon-only */
   .navmenu a {
     justify-content: center;
     padding: 0;
@@ -291,7 +291,7 @@ h6 {
     display: none;
   }
 
-  /* Expand sidebar on hover */
+  /* Expand on hover */
   .header:hover {
     width: 240px;
   }
@@ -300,7 +300,6 @@ h6 {
     margin-left: 240px;
   }
 
-  /* Show text when expanded */
   .header:hover .navmenu a {
     justify-content: flex-start;
     padding: 0 18px;
@@ -311,6 +310,55 @@ h6 {
   }
 
 }
+
+/* ==========================================================
+   DESKTOP (1200px+)
+   Icon-only sidebar with hover expand
+========================================================== */
+
+@media (min-width: 1200px) {
+
+  .header {
+    width: 90px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  main {
+    margin-left: 90px;
+    transition: margin-left 0.3s ease;
+  }
+
+  /* Default icon-only */
+  .navmenu a {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .navmenu a span {
+    display: none;
+  }
+
+  /* Expand on hover */
+  .header:hover {
+    width: 240px;
+  }
+
+  .header:hover ~ main {
+    margin-left: 240px;
+  }
+
+  .header:hover .navmenu a {
+    justify-content: flex-start;
+    padding: 0 18px;
+  }
+
+  .header:hover .navmenu a span {
+    display: inline;
+  }
+
+}
+
 
 
 /*--------------------------------------------------------------
