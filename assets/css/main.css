@@ -263,61 +263,51 @@ h6 {
 
 }
 
-
 /* ==========================================================
-   TABLET (768px – 1199px)
-   Fixed visible sidebar with full labels
+   TABLET + DESKTOP (768px and above)
+   Icon-only sidebar with expand on hover
 ========================================================== */
 
-@media (min-width: 768px) and (max-width: 1199px) {
-
-  .header {
-    width: 240px;
-    left: 0;
-  }
-
-  main {
-    margin-left: 240px;
-  }
-
-  .navmenu a {
-    max-width: 100%;
-  }
-
-  .navmenu a span {
-    display: block;
-    opacity: 1;
-  }
-
-}
-
-
-/* ==========================================================
-   DESKTOP (1200px+)
-   Icon-only sidebar (Text completely hidden)
-========================================================== */
-
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 
   .header {
     width: 90px;
     left: 0;
+    transition: width 0.3s ease;
   }
 
   main {
     margin-left: 90px;
+    transition: margin-left 0.3s ease;
   }
 
-  /* Icon-only layout */
+  /* Default: icon only */
   .navmenu a {
     justify-content: center;
     padding: 0;
-    max-width: 56px;
   }
 
-  /* Hide text completely */
   .navmenu a span {
-    display: none !important;
+    display: none;
+  }
+
+  /* Expand sidebar on hover */
+  .header:hover {
+    width: 240px;
+  }
+
+  .header:hover ~ main {
+    margin-left: 240px;
+  }
+
+  /* Show text when expanded */
+  .header:hover .navmenu a {
+    justify-content: flex-start;
+    padding: 0 18px;
+  }
+
+  .header:hover .navmenu a span {
+    display: inline;
   }
 
 }
