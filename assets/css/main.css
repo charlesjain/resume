@@ -1223,6 +1223,26 @@ section,
   margin: 10px 0 5px 0;
 }
 
+.testimonials .testimonial-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50%;
+  font-size: 14px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.testimonials .testimonial-linkedin:hover {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-2px);
+}
+
 .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
