@@ -1705,31 +1705,53 @@ ul {
 }
 
 /* Smooth hover animations */
+/* Premium Portfolio Interaction */
+
 .portfolio-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(.2,.8,.2,1),
+              box-shadow 0.4s ease;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .portfolio-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
 }
 
+/* Subtle Image Depth */
+.portfolio-item img {
+  transition: transform 0.6s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.04);
+}
+
+
 .service-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), 
+              box-shadow 0.35s ease;
 }
 
 .service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(5, 99, 187, 0.08);
 }
 
+
+
+/* Refined Resume Interaction */
+
 .resume-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
 .resume-item:hover {
-  transform: translateX(5px);
-  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(5, 99, 187, 0.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .navmenu a {
@@ -1769,3 +1791,40 @@ img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Smooth active nav animation */
+.navmenu a {
+  position: relative;
+  overflow: hidden;
+}
+
+.navmenu a::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 8px;
+  width: 60%;
+  height: 3px;
+  background: var(--contrast-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.navmenu a.active::after,
+.navmenu a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent-color);
+  z-index: 9999;
+  transition: width 0.2s ease;
+}

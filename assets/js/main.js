@@ -81,10 +81,10 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
+     duration: 800,
+  easing: 'cubic-bezier(.2,.8,.2,1)',
+  once: true,
+  mirror: false
     });
   }
   window.addEventListener('load', aosInit);
@@ -225,5 +225,16 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+/**
+ * Scroll progress indicator
+ */
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('scroll-progress').style.width = progress + "%";
+});
+
 
 })();
