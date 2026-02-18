@@ -1343,6 +1343,25 @@ section,
   color: var(--contrast-color);
 }
 
+.contact .download-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.contact .download-link:hover {
+  color: color-mix(in srgb, var(--accent-color), black 20%);
+  gap: 8px;
+}
+
+.contact .download-link i {
+  font-size: 16px;
+}
+
 .contact .php-email-form {
   height: 100%;
 }
