@@ -1814,7 +1814,13 @@ img {
 }
 
 
-
+/* Reduce About DP Image Size */
+.about .col-lg-4 img {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
 
 #scroll-progress {
   position: fixed;
