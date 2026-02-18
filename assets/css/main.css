@@ -1840,3 +1840,40 @@ img {
   z-index: 9999;
   transition: width 0.2s ease;
 }
+
+/* Personal Theme Cards */
+.personal-theme-card {
+  background: var(--surface-color);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), 
+              box-shadow 0.35s ease;
+}
+
+.personal-theme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(5, 99, 187, 0.12);
+}
+
+.personal-theme-card .theme-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.personal-theme-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+.personal-theme-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+}
