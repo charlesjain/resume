@@ -852,6 +852,50 @@ section,
   background-color: var(--accent-color);
 }
 
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.skills-list li i {
+  width: 22px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   Skills Layout Refinement
+========================= */
+
+.skills-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-content {
+  margin-top: 40px;
+  row-gap: 10px;
+}
+
+@media (min-width: 992px) {
+  .skills-content {
+    column-gap: 40px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -889,17 +933,25 @@ section,
 
 .resume .resume-item ul {
   padding-left: 20px;
+	list-style: disc;
 }
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+	display: list-item;
 }
 
 @media (max-width: 768px) {
   .resume .resume-item ul li {
     margin-right: 10px;
+	  display: list-item;
   }
 }
+
+.resume .resume-item ul li::marker {
+  color: var(--accent-color);
+}
+
 
 .resume .resume-item:last-child {
   padding-bottom: 0;
