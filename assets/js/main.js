@@ -99,9 +99,9 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+typeSpeed: 60,
+backSpeed: 30,
+backDelay: 2500
     });
   }
 
@@ -230,11 +230,16 @@
  * Scroll progress indicator
  */
 window.addEventListener('scroll', () => {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
-  document.getElementById('scroll-progress').style.width = progress + "%";
+
+  progressBar.style.width = progress + "%";
 });
+
 
 
 })();

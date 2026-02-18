@@ -201,7 +201,6 @@ h6 {
   display: flex;
   align-items: center;
   gap: 12px;
-
   height: 56px;
   padding: 0 18px;
   margin-bottom: 8px;
@@ -211,9 +210,14 @@ h6 {
   font-size: 15px;
   color: var(--nav-color);
 
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
-  transition: all 0.3s ease;
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+
+  transition:
+    background-color 0.35s cubic-bezier(.2,.8,.2,1),
+    color 0.3s ease,
+    transform 0.25s ease;
 }
+
 
 .navmenu a i {
   font-size: 20px;
@@ -225,11 +229,19 @@ h6 {
 }
 
 /* Hover & Active */
-.navmenu a:hover,
-.navmenu .active {
+.navmenu a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
+  transform: translateX(2px);
+}
+
+.navmenu a.active {
   background: var(--accent-color);
   color: var(--contrast-color);
+  box-shadow: 0 8px 20px rgba(5, 99, 187, 0.2);
 }
+
+
 
 
 /* ==========================================================
@@ -637,16 +649,26 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(255, 255, 255, 0.75) 70%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
 }
+
 
 .hero .container {
   position: relative;
   z-index: 3;
 }
+
+
+
 
 .hero h2 {
   margin: 0;
@@ -992,7 +1014,7 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
@@ -1791,30 +1813,6 @@ img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Smooth active nav animation */
-.navmenu a {
-  position: relative;
-  overflow: hidden;
-}
-
-.navmenu a::after {
-  content: "";
-  position: absolute;
-  left: 20%;
-  bottom: 8px;
-  width: 60%;
-  height: 3px;
-  background: var(--contrast-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-  border-radius: 10px;
-}
-
-.navmenu a.active::after,
-.navmenu a:hover::after {
-  transform: scaleX(1);
-}
 
 
 
