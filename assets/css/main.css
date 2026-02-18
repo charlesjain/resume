@@ -665,7 +665,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  padding-left: 80px;
+  padding-left: 200px;
 }
 
 
@@ -703,6 +703,12 @@ section,
 
 .hero .social-links a:hover {
   color: var(--accent-color);
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .hero .container {
+    padding-left: 80px;
+  }
 }
 
 @media (max-width: 768px) {
