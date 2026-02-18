@@ -675,6 +675,7 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .hero p {
