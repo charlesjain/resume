@@ -243,7 +243,7 @@
     }
 
     @media (max-width: 992px) {
-      /* Mobile Layout: Title, Image, then Description/Info */
+      /* Mobile Layout: Title, Image, Heading, Description/Info */
       .row.align-items-start {
         display: flex;
         flex-wrap: wrap;
@@ -252,21 +252,23 @@
       .hero-content-col {
         order: 1;
         width: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
       .case-study-title {
         order: 1;
       }
 
-      .case-study-heading {
-        order: 2;
-        margin-bottom: 20px;
-      }
-
       .hero-mockup-col {
-        order: 3;
+        order: 2;
         width: 100%;
         margin: 20px 0;
+      }
+
+      .case-study-heading {
+        order: 3;
+        margin-bottom: 20px;
       }
 
       .case-study-description,
@@ -277,11 +279,6 @@
 
       .hero-mockup {
         max-width: 350px;
-      }
-
-      .hero-content-col {
-        display: flex;
-        flex-direction: column;
       }
     }
 
