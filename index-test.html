@@ -923,6 +923,19 @@
     const honorsLightbox = GLightbox({
       selector: '[data-gallery="honors-gallery"]'
     });
+
+    // Handle hash navigation after page load and AOS initialization
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (window.location.hash) {
+          const hash = window.location.hash;
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }, 500);
+    });
   </script>
 </body>
 
