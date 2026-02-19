@@ -227,7 +227,7 @@
     }
 
     @media (max-width: 992px) {
-      /* Mobile Layout: Reorder to show image between title and description */
+      /* Mobile Layout: Title at top, then description with image next to it */
       .row.align-items-center {
         display: flex;
         flex-direction: column;
@@ -236,21 +236,24 @@
       .hero-title-section {
         order: 1;
         width: 100%;
-      }
-
-      .hero-mockup-col {
-        order: 2;
-        width: 100%;
-        margin: 30px 0;
+        margin-bottom: 30px;
       }
 
       .hero-description-section {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-mockup-col {
         order: 3;
         width: 100%;
+        margin-top: 30px;
       }
 
       .hero-mockup {
-        max-width: 400px;
+        max-width: 350px;
       }
     }
 
