@@ -243,13 +243,45 @@
     }
 
     @media (max-width: 992px) {
-      /* Mobile Layout: Content first, then image */
+      /* Mobile Layout: Title, Image, then Description/Info */
+      .row.align-items-start {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .hero-content-col {
-        margin-bottom: 30px;
+        order: 1;
+        width: 100%;
+      }
+
+      .case-study-title {
+        order: 1;
+      }
+
+      .case-study-heading {
+        order: 2;
+        margin-bottom: 20px;
+      }
+
+      .hero-mockup-col {
+        order: 3;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .case-study-description,
+      .project-info-items,
+      .nda-notice {
+        order: 4;
       }
 
       .hero-mockup {
         max-width: 350px;
+      }
+
+      .hero-content-col {
+        display: flex;
+        flex-direction: column;
       }
     }
 
