@@ -113,8 +113,21 @@
     .hero-mockup {
       max-width: 100%;
       height: auto;
-      border-radius: 15px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-mockup-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Desktop Layout: Standard grid */
+    @media (min-width: 993px) {
+      .hero-mockup-col {
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+      }
     }
 
     /* Project Info Items - Similar to Contact Section */
@@ -197,8 +210,30 @@
     }
 
     @media (max-width: 992px) {
+      /* Mobile Layout: Reorder to show image between title and description */
+      .row.align-items-center {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-title-section {
+        order: 1;
+        width: 100%;
+      }
+
+      .hero-mockup-col {
+        order: 2;
+        width: 100%;
+        margin: 30px 0;
+      }
+
+      .hero-description-section {
+        order: 3;
+        width: 100%;
+      }
+
       .hero-mockup {
-        margin-top: 40px;
+        max-width: 400px;
       }
     }
 
@@ -217,6 +252,10 @@
 
       .nav-back-button span {
         display: none;
+      }
+
+      .hero-mockup {
+        max-width: 100%;
       }
     }
   </style>
@@ -244,12 +283,19 @@
       <div class="container" data-aos="fade-up">
         
         <div class="row align-items-center">
-          <!-- Left Side: Content -->
-          <div class="col-lg-7">
+          <!-- Title & Heading Section -->
+          <div class="col-lg-7 hero-title-section">
             <div class="case-study-title">Enterprise Employee Engagement Platform</div>
-            
             <h1 class="case-study-heading">Designing a Culture-First Engagement Ecosystem for a Global Enterprise</h1>
+          </div>
 
+          <!-- Mockup Image -->
+          <div class="col-lg-5 hero-mockup-col" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/img/cs1/mock-up.png" alt="Employee Engagement Platform Mockup" class="hero-mockup">
+          </div>
+
+          <!-- Description & Project Info Section -->
+          <div class="col-lg-7 hero-description-section">
             <p class="case-study-description">
               A standalone employee engagement platform created to separate cultural collaboration from official workplace communication systems — ensuring productivity, security, and structured community building.
             </p>
@@ -291,11 +337,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Right Side: Mockup Image -->
-          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/img/mock-up.png" alt="Employee Engagement Platform Mockup" class="hero-mockup">
           </div>
         </div>
 
