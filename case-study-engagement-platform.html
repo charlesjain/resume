@@ -37,26 +37,52 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Case Study Specific Styles */
-    .case-study-hero {
-      padding: 120px 0 60px;
-      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, var(--background-color) 100%);
+    /* Fixed Navigation Header */
+    .case-study-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--background-color);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 15px 0;
     }
 
-    .back-button {
+    .case-study-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-back-button {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       color: var(--accent-color);
       text-decoration: none;
       font-weight: 600;
-      margin-bottom: 30px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
       transition: all 0.3s ease;
     }
 
-    .back-button:hover {
-      gap: 12px;
-      color: color-mix(in srgb, var(--accent-color), black 20%);
+    .nav-back-button:hover {
+      color: var(--contrast-color);
+      background: var(--accent-color);
+    }
+
+    /* Case Study Specific Styles */
+    .case-study-hero {
+      padding: 140px 0 80px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, var(--background-color) 100%);
     }
 
     .case-study-title {
@@ -69,55 +95,69 @@
     }
 
     .case-study-heading {
-      font-size: 42px;
+      font-size: 38px;
       font-weight: 700;
       color: var(--heading-color);
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       line-height: 1.3;
     }
 
     .case-study-description {
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.8;
       color: var(--default-color);
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .project-details {
-      background: var(--surface-color);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-      margin-top: 50px;
+    /* Hero Mockup Image */
+    .hero-mockup {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     }
 
-    .detail-item {
-      margin-bottom: 30px;
+    /* Project Info Items - Similar to Contact Section */
+    .project-info-item {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
-    .detail-item:last-child {
-      margin-bottom: 0;
+    .project-info-item + .project-info-item {
+      margin-top: 20px;
     }
 
-    .detail-label {
-      font-size: 14px;
-      font-weight: 700;
+    .project-info-item i {
       color: var(--accent-color);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      margin-right: 15px;
     }
 
-    .detail-content {
+    .project-info-item h3 {
+      padding: 0;
       font-size: 16px;
-      color: var(--default-color);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .project-info-item p {
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 15px;
       line-height: 1.6;
     }
 
-    .detail-content.large {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--heading-color);
+    .project-info-item:hover i {
+      background: var(--accent-color);
+      color: var(--contrast-color);
     }
 
     .mockup-section {
@@ -156,21 +196,27 @@
       font-style: italic;
     }
 
+    @media (max-width: 992px) {
+      .hero-mockup {
+        margin-top: 40px;
+      }
+    }
+
     @media (max-width: 768px) {
       .case-study-heading {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       .case-study-hero {
-        padding: 100px 0 40px;
-      }
-
-      .project-details {
-        padding: 30px 20px;
+        padding: 120px 0 60px;
       }
 
       .mockup-image {
         max-width: 220px;
+      }
+
+      .nav-back-button span {
+        display: none;
       }
     }
   </style>
@@ -178,60 +224,82 @@
 
 <body class="case-study-page">
 
+  <!-- Fixed Navigation Header -->
+  <header class="case-study-header">
+    <div class="container">
+      <div class="case-study-nav">
+        <img src="assets/img/CJ-icon.png" alt="CJ" class="nav-icon">
+        <a href="index.html" class="nav-back-button">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
   <main class="main">
 
     <!-- Case Study Hero Section -->
     <section class="case-study-hero">
       <div class="container" data-aos="fade-up">
         
-        <a href="index.html" class="back-button">
-          <i class="bi bi-arrow-left"></i> Back to Portfolio
-        </a>
+        <div class="row align-items-center">
+          <!-- Left Side: Content -->
+          <div class="col-lg-7">
+            <div class="case-study-title">Enterprise Employee Engagement Platform</div>
+            
+            <h1 class="case-study-heading">Designing a Culture-First Engagement Ecosystem for a Global Enterprise</h1>
 
-        <div class="case-study-title">Enterprise Employee Engagement Platform</div>
-        
-        <h1 class="case-study-heading">Designing a Culture-First Engagement Ecosystem for a Global Enterprise</h1>
-
-        <div class="row">
-          <div class="col-lg-8">
             <p class="case-study-description">
               A standalone employee engagement platform created to separate cultural collaboration from official workplace communication systems — ensuring productivity, security, and structured community building.
             </p>
             <p class="case-study-description">
               Designed to reduce communication noise during work hours while enabling hybrid visibility, recognition, wellness participation, and cross-team bonding — accessible anytime, anywhere.
             </p>
-          </div>
-        </div>
 
-        <div class="row mt-5">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <div class="project-details">
-              <div class="detail-item">
-                <div class="detail-label">Role</div>
-                <div class="detail-content large">Senior UI/UX Designer</div>
+            <!-- Project Info Items -->
+            <div class="project-info-items" style="margin-top: 40px;">
+              <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-person-badge flex-shrink-0"></i>
+                <div>
+                  <h3>Role</h3>
+                  <p>Senior UI/UX Designer</p>
+                </div>
               </div>
-              <div class="detail-item">
-                <div class="detail-label">Scope</div>
-                <div class="detail-content">Product Strategy · UX Architecture · UI Design</div>
+
+              <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-building flex-shrink-0"></i>
+                <div>
+                  <h3>Organization</h3>
+                  <p>Carelon Global Solutions</p>
+                </div>
+              </div>
+
+              <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-layers flex-shrink-0"></i>
+                <div>
+                  <h3>Scope</h3>
+                  <p>Product Strategy · UX Architecture · UI Design</p>
+                </div>
+              </div>
+
+              <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-bullseye flex-shrink-0"></i>
+                <div>
+                  <h3>Focus Areas</h3>
+                  <p>Engagement Systems · Access Governance · Hybrid Transparency</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="project-details">
-              <div class="detail-item">
-                <div class="detail-label">Organization</div>
-                <div class="detail-content large">Carelon Global Solutions</div>
-              </div>
-              <div class="detail-item">
-                <div class="detail-label">Focus Areas</div>
-                <div class="detail-content">Engagement Systems · Access Governance · Hybrid Transparency</div>
-              </div>
-            </div>
+          <!-- Right Side: Mockup Image -->
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/img/mock-up.png" alt="Employee Engagement Platform Mockup" class="hero-mockup">
           </div>
         </div>
 
-        <div class="nda-notice" data-aos="fade-up" data-aos-delay="300">
+        <div class="nda-notice" data-aos="fade-up" data-aos-delay="500">
           This project was designed for Carelon Global Solutions. Due to NDA restrictions, all visuals shown here are recreated or abstracted representations. Original enterprise assets and internal systems cannot be publicly shared.
         </div>
 
