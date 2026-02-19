@@ -135,7 +135,7 @@
 
     /* Hero Mockup Image */
     .hero-mockup {
-      max-width: 75%;
+      max-width: 85%;
       height: auto;
     }
 
@@ -303,6 +303,88 @@
         max-width: 100%;
       }
     }
+
+    /* Content Sections */
+    .content-section {
+      padding: 80px 0;
+      background: var(--background-color);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: var(--default-color);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .info-card {
+      background: var(--surface-color);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 15px;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--default-color);
+      margin: 0;
+    }
+
+    .card-icon {
+      font-size: 32px;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .section-header h2 {
+        font-size: 28px;
+      }
+
+      .content-section {
+        padding: 60px 0;
+      }
+    }
   </style>
 </head>
 
@@ -389,6 +471,78 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>The Problem</h2>
+          <p>Identifying the core challenges that needed to be addressed</p>
+        </div>
+
+        <div class="card-container">
+          <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="bi bi-exclamation-triangle"></i>
+            </div>
+            <h3>Challenge 1</h3>
+            <p>Description of the first major problem or challenge faced by the organization that needed to be solved.</p>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="bi bi-exclamation-triangle"></i>
+            </div>
+            <h3>Challenge 2</h3>
+            <p>Description of the second major problem or challenge faced by the organization that needed to be solved.</p>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon">
+              <i class="bi bi-exclamation-triangle"></i>
+            </div>
+            <h3>Challenge 3</h3>
+            <p>Description of the third major problem or challenge faced by the organization that needed to be solved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 98%) 0%, var(--background-color) 100%);">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>The Strategy</h2>
+          <p>Strategic approach to solving the identified challenges</p>
+        </div>
+
+        <div class="card-container">
+          <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3>Strategy 1</h3>
+            <p>Description of the first strategic approach taken to address the challenges and achieve project goals.</p>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3>Strategy 2</h3>
+            <p>Description of the second strategic approach taken to address the challenges and achieve project goals.</p>
+          </div>
+
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3>Strategy 3</h3>
+            <p>Description of the third strategic approach taken to address the challenges and achieve project goals.</p>
+          </div>
+        </div>
       </div>
     </section>
 
