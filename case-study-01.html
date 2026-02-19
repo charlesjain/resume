@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Enterprise Employee Engagement Platform - Case Study | Charles Jayaseelan</title>
+  <meta name="description" content="Case study: Designing a culture-first engagement ecosystem for a global enterprise">
+  <meta name="keywords" content="UI/UX Design, Employee Engagement, Enterprise Platform, Product Strategy">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Prevent horizontal overflow */
+    body {
+      overflow-x: hidden;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    /* Remove main element margin/padding */
+    .main {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* Fixed Navigation Header */
+    .case-study-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--background-color);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    .case-study-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .nav-back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
+      transition: all 0.3s ease;
+    }
+
+    .nav-back-button:hover {
+      color: var(--contrast-color);
+      background: var(--accent-color);
+    }
+
+    /* Case Study Specific Styles */
+    .case-study-hero {
+      padding: 100px 0 40px;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, var(--background-color) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .case-study-title {
+      font-size: 16px;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .case-study-heading {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+
+    .case-study-description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--default-color);
+      margin-bottom: 20px;
+    }
+
+    .case-study-description:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    /* Hero Mockup Image */
+    .hero-mockup {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hero-mockup-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Desktop Layout: Standard grid */
+    @media (min-width: 993px) {
+      .hero-mockup-col {
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+      }
+    }
+
+    /* Project Info Items - 2x2 Grid */
+    .project-info-items {
+      margin-top: 20px !important;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
+    }
+
+    .project-info-item {
+      padding: 0;
+    }
+
+    .project-info-item i {
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      margin-right: 12px;
+    }
+
+    .project-info-item h3 {
+      padding: 0;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .project-info-item p {
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .project-info-item:hover i {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .mockup-section {
+      padding: 80px 0;
+      background: var(--background-color);
+    }
+
+    .mockup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .mockup-image {
+      max-width: 280px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .mockup-image:hover {
+      transform: scale(1.05);
+    }
+
+    .nda-notice {
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
+      padding: 15px 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-color);
+      margin-top: 30px;
+      font-size: 12px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-style: italic;
+    }
+
+    @media (max-width: 992px) {
+      /* Mobile Layout: Title at top, then description with image next to it */
+      .row.align-items-center {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-title-section {
+        order: 1;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .hero-description-section {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-mockup-col {
+        order: 3;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .hero-mockup {
+        max-width: 350px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .case-study-heading {
+        font-size: 28px;
+      }
+
+      .case-study-hero {
+        padding: 120px 0 60px;
+      }
+
+      .mockup-image {
+        max-width: 220px;
+      }
+
+      .nav-back-button span {
+        display: none;
+      }
+
+      .hero-mockup {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="case-study-page">
+
+  <!-- Fixed Navigation Header -->
+  <header class="case-study-header">
+    <div class="container">
+      <div class="case-study-nav">
+        <img src="assets/img/CJ-icon.png" alt="CJ" class="nav-icon">
+        <a href="index.html" class="nav-back-button">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Case Study Hero Section -->
+    <section class="case-study-hero">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="row align-items-center">
+          <!-- Title & Heading Section -->
+          <div class="col-lg-7 hero-title-section">
+            <div class="case-study-title">Enterprise Employee Engagement Platform</div>
+            <h1 class="case-study-heading">Designing a Culture-First Engagement Ecosystem for a Global Enterprise</h1>
+          </div>
+
+          <!-- Mockup Image -->
+          <div class="col-lg-5 hero-mockup-col" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/img/cs1/mock-up01.png" alt="Employee Engagement Platform Mockup" class="hero-mockup">
+          </div>
+
+          <!-- Description & Project Info Section -->
+          <div class="col-lg-7 hero-description-section">
+            <p class="case-study-description">
+              A standalone employee engagement platform created to separate cultural collaboration from official workplace communication systems — ensuring productivity, security, and structured community building.
+            </p>
+            <p class="case-study-description">
+              Designed to reduce communication noise during work hours while enabling hybrid visibility, recognition, wellness participation, and cross-team bonding — accessible anytime, anywhere.
+            </p>
+
+            <!-- Project Info Items - 2x2 Grid -->
+            <div class="project-info-items">
+              <div class="info-grid">
+                <!-- Row 1: Role and Organization -->
+                <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-person-badge flex-shrink-0"></i>
+                  <div>
+                    <h3>Role</h3>
+                    <p>Senior UI/UX Designer</p>
+                  </div>
+                </div>
+
+                <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-building flex-shrink-0"></i>
+                  <div>
+                    <h3>Organization</h3>
+                    <p>Carelon Global Solutions</p>
+                  </div>
+                </div>
+
+                <!-- Row 2: Scope and Focus Areas -->
+                <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-layers flex-shrink-0"></i>
+                  <div>
+                    <h3>Scope</h3>
+                    <p>Product Strategy · UX Architecture · UI Design</p>
+                  </div>
+                </div>
+
+                <div class="project-info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-bullseye flex-shrink-0"></i>
+                  <div>
+                    <h3>Focus Areas</h3>
+                    <p>Engagement Systems · Access Governance · Hybrid Transparency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nda-notice" data-aos="fade-up" data-aos-delay="500">
+          This project was designed for Carelon Global Solutions. Due to NDA restrictions, all visuals shown here are recreated or abstracted representations. Original enterprise assets and internal systems cannot be publicly shared.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Charles Jayaseelan</h3>
+      <p>Creating compelling design experiences across the globe — blending creativity, strategy, and leadership to deliver visual impact.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charlesja" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Charles Jayaseelan</strong> <span>All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+
+</body>
+
+</html>
