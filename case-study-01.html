@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Enterprise Employee Engagement Platform - Case Study | Charles Jayaseelan</title>
-  <meta name="description" content="Case study: Designing a culture-first engagement ecosystem for a global enterprise">
+  <title>Enterprise Employee Engagement Platform - Case Study</title>
+  <meta name="description" content="Enterprise case study: Designing a standalone employee engagement platform focused on hybrid transparency, peer recognition, and secure access governance.">
   <meta name="keywords" content="UI/UX Design, Employee Engagement, Enterprise Platform, Product Strategy">
 
   <!-- Favicons -->
@@ -37,354 +37,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Prevent horizontal overflow */
-    body {
-      overflow-x: hidden;
-    }
-
-    html {
-      overflow-x: hidden;
-    }
-
-    /* Remove main element margin/padding */
-    .main {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      max-width: 100%;
-    }
-
-    /* Fixed Navigation Header */
-    .case-study-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: var(--background-color);
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      padding: 15px 0;
-    }
-
-    .case-study-nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .nav-back-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 6px;
-      background: color-mix(in srgb, var(--accent-color), transparent 95%);
-      transition: all 0.3s ease;
-    }
-
-    .nav-back-button:hover {
-      color: var(--contrast-color);
-      background: var(--accent-color);
-    }
-
-    /* Case Study Specific Styles */
-    .case-study-hero {
-      padding: 100px 0 40px;
-      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, var(--background-color) 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .case-study-title {
-      font-size: 16px;
-      color: var(--accent-color);
-      font-weight: 600;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .case-study-heading {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--heading-color);
-      margin-bottom: 30px;
-      line-height: 1.2;
-    }
-
-    .case-study-description {
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--default-color);
-      margin-bottom: 25px;
-    }
-
-    .case-study-description:last-of-type {
-      margin-bottom: 20px;
-    }
-
-    /* Hero Mockup Image */
-    .hero-mockup {
-      max-width: 85%;
-      height: auto;
-    }
-
-    .hero-mockup-col {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Desktop Layout: 2-column side by side */
-    @media (min-width: 993px) {
-      .hero-content-col {
-        padding-right: 40px;
-      }
-
-      .hero-mockup-col {
-        position: sticky;
-        top: 100px;
-        align-self: flex-start;
-      }
-    }
-
-    /* Project Info Items - 2x2 Grid */
-    .project-info-items {
-      margin-top: 20px !important;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 20px;
-    }
-
-    .project-info-item {
-      padding: 0;
-    }
-
-    .project-info-item i {
-      color: var(--accent-color);
-      background: color-mix(in srgb, var(--accent-color), transparent 92%);
-      font-size: 18px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50px;
-      transition: all 0.3s ease-in-out;
-      margin-right: 12px;
-    }
-
-    .project-info-item h3 {
-      padding: 0;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .project-info-item p {
-      padding: 0;
-      margin-bottom: 0;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .project-info-item:hover i {
-      background: var(--accent-color);
-      color: var(--contrast-color);
-    }
-
-    .mockup-section {
-      padding: 80px 0;
-      background: var(--background-color);
-    }
-
-    .mockup-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .mockup-image {
-      max-width: 280px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
-    }
-
-    .mockup-image:hover {
-      transform: scale(1.05);
-    }
-
-    .nda-notice {
-      background: color-mix(in srgb, var(--accent-color), transparent 95%);
-      padding: 15px 20px;
-      border-radius: 8px;
-      border-left: 4px solid var(--accent-color);
-      margin-top: 40px;
-      font-size: 12px;
-      color: color-mix(in srgb, var(--default-color), transparent 20%);
-      font-style: italic;
-    }
-
-    @media (max-width: 992px) {
-      /* Mobile Layout: Title, Image, Heading, Description/Info */
-      .row.align-items-start {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .hero-content-col {
-        order: 1;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .case-study-title {
-        order: 1;
-      }
-
-      .hero-mockup-col {
-        order: 2;
-        width: 100%;
-        margin: 20px 0;
-      }
-
-      .case-study-heading {
-        order: 3;
-        margin-bottom: 20px;
-      }
-
-      .case-study-description,
-      .project-info-items,
-      .nda-notice {
-        order: 4;
-      }
-
-      .hero-mockup {
-        max-width: 350px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .case-study-heading {
-        font-size: 28px;
-      }
-
-      .case-study-hero {
-        padding: 120px 0 60px;
-      }
-
-      .mockup-image {
-        max-width: 220px;
-      }
-
-      .nav-back-button span {
-        display: none;
-      }
-
-      .hero-mockup {
-        max-width: 100%;
-      }
-    }
-
-    /* Content Sections */
-    .content-section {
-      padding: 50px 0;
-      background: var(--background-color);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header h2 {
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--heading-color);
-      margin-bottom: 15px;
-    }
-
-    .section-header p {
-      font-size: 16px;
-      color: var(--default-color);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    /* Card Styles */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-
-    .info-card {
-      background: var(--surface-color);
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-      transition: all 0.3s ease;
-    }
-
-    .info-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-color: var(--accent-color);
-    }
-
-    .info-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--heading-color);
-      margin-bottom: 15px;
-    }
-
-    .info-card p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--default-color);
-      margin: 0;
-    }
-
-    .card-icon {
-      font-size: 32px;
-      color: var(--accent-color);
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 992px) {
-      .card-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .section-header h2 {
-        font-size: 28px;
-      }
-
-      .content-section {
-        padding: 60px 0;
-      }
-    }
+    
   </style>
 </head>
 
@@ -484,7 +137,7 @@
 
     
     <!-- Challenge & Strategy 2-Column Section -->
-    <section class="content-section" style="padding: 50px 0;">
+   <section class="content-section section-sm">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <!-- Left Column: The Challenge -->
@@ -549,10 +202,10 @@
     </section>
 
     <!-- Product Architecture Section -->
-    <section class="content-section" style="background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 98%) 0%, var(--background-color) 100%);">
+    <section class="content-section section-lg section-soft-accent">
       <div class="container" data-aos="fade-up">
         <div class="section-header" style="margin-bottom: 40px;">
-          <h2>Product Architecture (Task Flow)</h2>
+          <h2>Product Architecture</h2>
         </div>
 
         <!-- Full Width Image -->
@@ -576,12 +229,12 @@
         </div>
 
         <!-- Feature 1: Text Left, Image Right -->
-        <div class="row align-items-center" style="margin-bottom: 130px;" data-aos="fade-up">
+        <div class="row align-items-center feature-block" data-aos="fade-up">
           <div class="col-lg-6">
             <div class="case-study-title">Hybrid Coordination</div>
             <h2 class="case-study-heading">Structured Hybrid Transparency with Clear Team Visibility</h2>
             <p class="case-study-description">Employees can indicate their work mode through a lightweight calendar interface, enabling shared visibility across remote, on-site, and leave schedules. This supports coordination and planning while remaining independent from operational enterprise systems.</p>
-            <ul style="font-size: 15px; line-height: 1.8; color: var(--default-color); padding-left: 20px; list-style: none;">
+            <ul class="feature-list">
               <li><i class="bi bi-calendar-month"></i> Monthly calendar overview</li>
               <li><i class="bi bi-tag"></i> Work mode tagging (WFH / On-site / Leave)</li>
               <li><i class="bi bi-eye"></i> Team-level visibility</li>
@@ -596,12 +249,12 @@
         </div>
 
         <!-- Feature 2: Image Left, Text Right -->
-        <div class="row align-items-center" style="margin-bottom: 130px;" data-aos="fade-up">
+        <div class="row align-items-center feature-block" data-aos="fade-up">
           <div class="col-lg-6 order-lg-2">
             <div class="case-study-title">Culture & Community</div>
             <h2 class="case-study-heading">Dedicated Space for Events, Wellness & CSR</h2>
             <p class="case-study-description">All non-operational activities such as team outings, cultural events, wellness programs, and CSR initiatives are structured within a dedicated engagement layer. Participation remains voluntary and separate from official communication channels.</p>
-            <ul style="font-size: 15px; line-height: 1.8; color: var(--default-color); padding-left: 20px; list-style: none;">
+            <ul class="feature-list">
               <li><i class="bi bi-search"></i> Categorized event discovery</li>
               <li><i class="bi bi-hand-thumbs-up"></i> RSVP participation flow</li>
               <li><i class="bi bi-people"></i> Family-inclusive events</li>
@@ -616,12 +269,12 @@
         </div>
 
         <!-- Feature 3: Text Left, Image Right -->
-        <div class="row align-items-center" style="margin-bottom: 130px;" data-aos="fade-up">
+        <div class="row align-items-center feature-block" data-aos="fade-up">
           <div class="col-lg-6">
             <div class="case-study-title">Community Interaction</div>
             <h2 class="case-study-heading">Informal Social Layer for Employee Connection</h2>
             <p class="case-study-description">A voluntary internal feed allows employees to share milestones, experiences, and moments beyond work tasks. The interaction model supports storytelling, appreciation, and connection without interfering with business communication systems.</p>
-            <ul style="font-size: 15px; line-height: 1.8; color: var(--default-color); padding-left: 20px; list-style: none;">
+            <ul class="feature-list">
               <li><i class="bi bi-image"></i> Image-based posts</li>
               <li><i class="bi bi-chat-dots"></i> Likes & comments</li>
               <li><i class="bi bi-book"></i> Community storytelling</li>
@@ -636,12 +289,12 @@
         </div>
 
         <!-- Feature 4: Image Left, Text Right -->
-        <div class="row align-items-center" style="margin-bottom: 130px;" data-aos="fade-up">
+        <div class="row align-items-center feature-block" data-aos="fade-up">
           <div class="col-lg-6 order-lg-2">
             <div class="case-study-title">Appreciation System</div>
             <h2 class="case-study-heading">Peer Recognition that Celebrates Everyday Wins</h2>
             <p class="case-study-description">Recognition is built to celebrate contributions in a simple and meaningful way. Through peer nominations and point-based appreciation, employees can acknowledge each other’s efforts in real time — creating a culture of positivity that feels natural and encouraging.</p>
-            <ul style="font-size: 15px; line-height: 1.8; color: var(--default-color); padding-left: 20px; list-style: none;">
+            <ul class="feature-list">
               <li><i class="bi bi-star"></i> Earn points through appreciation</li>
               <li><i class="bi bi-trophy"></i> Visible leaderboard for friendly motivation</li>
               <li><i class="bi bi-person-check"></i> Easy peer nominations</li>
@@ -661,7 +314,7 @@
             <div class="case-study-title">Simplicity & Access</div>
             <h2 class="case-study-heading">Easy Login with Independent and Secure Access</h2>
             <p class="case-study-description">The platform offers a simple login experience exclusively for active employees, without any integration into official enterprise communication systems. With clean settings and an intuitive interface, it ensures a lightweight, collaborative experience while maintaining separation from sensitive organizational data.</p>
-            <ul style="font-size: 15px; line-height: 1.8; color: var(--default-color); padding-left: 20px; list-style: none;">
+            <ul class="feature-list">
               <li><i class="bi bi-box-arrow-in-right"></i> Simple login for active employees only</li>
               <li><i class="bi bi-shield-check"></i> No integration with official work communication platforms</li>
               <li><i class="bi bi-gear"></i> Clean and easy-to-manage settings</li>
@@ -678,7 +331,7 @@
     </section>
 
     <!-- Impact & Outcomes Section -->
-    <section class="content-section" style="padding: 120px 0; background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 98%) 0%, var(--background-color) 100%);">
+    <section class="content-section section-lg section-soft-accent">
       <div class="container" data-aos="fade-up">
         <div class="section-header" style="margin-bottom: 60px;">
           <h2>Impact & Outcomes</h2>
@@ -686,73 +339,88 @@
         </div>
 
         <!-- Metric Cards Grid -->
-        <div class="row" style="row-gap: 50px;">
-          <!-- Card 1: Increased Employee Engagement -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div style="background: var(--background-color); border-radius: 12px; padding: 40px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); height: 100%;">
-              <div style="display: flex; align-items: flex-start; gap: 20px;">
-                <div style="font-size: 48px; color: var(--accent-color); font-weight: 700; line-height: 1;">↑</div>
-                <div>
-                  <h3 style="font-size: 22px; font-weight: 700; color: var(--heading-color); margin-bottom: 15px;">Increased Employee Engagement</h3>
-                  <p style="font-size: 15px; line-height: 1.6; color: var(--default-color); margin: 0;">A dedicated engagement space encourages voluntary participation without interfering with daily operational communication.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="row metric-grid">
 
-          <!-- Card 2: Higher Event & Wellness Participation -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div style="background: var(--background-color); border-radius: 12px; padding: 40px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); height: 100%;">
-              <div style="display: flex; align-items: flex-start; gap: 20px;">
-                <div style="font-size: 48px; color: var(--accent-color); font-weight: 700; line-height: 1;">↑</div>
-                <div>
-                  <h3 style="font-size: 22px; font-weight: 700; color: var(--heading-color); margin-bottom: 15px;">Higher Event & Wellness Participation</h3>
-                  <p style="font-size: 15px; line-height: 1.6; color: var(--default-color); margin: 0;">Clear visibility of activities and simplified interaction flows improve consistent involvement across teams.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Reduced Communication Noise -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div style="background: var(--background-color); border-radius: 12px; padding: 40px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); height: 100%;">
-              <div style="display: flex; align-items: flex-start; gap: 20px;">
-                <div style="font-size: 48px; color: var(--accent-color); font-weight: 700; line-height: 1;">↓</div>
-                <div>
-                  <h3 style="font-size: 22px; font-weight: 700; color: var(--heading-color); margin-bottom: 15px;">Reduced Communication Noise</h3>
-                  <p style="font-size: 15px; line-height: 1.6; color: var(--default-color); margin: 0;">Separating engagement from official work platforms improves clarity and focus within operational channels.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Stronger Culture Visibility -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div style="background: var(--background-color); border-radius: 12px; padding: 40px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); height: 100%;">
-              <div style="display: flex; align-items: flex-start; gap: 20px;">
-                <div style="font-size: 48px; color: var(--accent-color); font-weight: 700; line-height: 1;">↑</div>
-                <div>
-                  <h3 style="font-size: 22px; font-weight: 700; color: var(--heading-color); margin-bottom: 15px;">Stronger Culture Visibility</h3>
-                  <p style="font-size: 15px; line-height: 1.6; color: var(--default-color); margin: 0;">Hybrid transparency, recognition systems, and community feeds make cultural participation more visible across the organization.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Card 1 -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+    <div class="metric-card">
+      <div class="metric-card__content">
+        <div class="metric-card__icon">↑</div>
+        <div class="metric-card__text">
+          <h3 class="metric-card__title">Increased Employee Engagement</h3>
+          <p class="metric-card__description">
+            A dedicated engagement space encourages voluntary participation
+            without interfering with daily operational communication.
+          </p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="metric-card">
+      <div class="metric-card__content">
+        <div class="metric-card__icon">↑</div>
+        <div class="metric-card__text">
+          <h3 class="metric-card__title">Higher Event & Wellness Participation</h3>
+          <p class="metric-card__description">
+            Clear visibility of activities and simplified interaction flows
+            improve consistent involvement across teams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+    <div class="metric-card">
+      <div class="metric-card__content">
+        <div class="metric-card__icon">↓</div>
+        <div class="metric-card__text">
+          <h3 class="metric-card__title">Reduced Communication Noise</h3>
+          <p class="metric-card__description">
+            Separating engagement from official work platforms improves clarity
+            and focus within operational channels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+    <div class="metric-card">
+      <div class="metric-card__content">
+        <div class="metric-card__icon">↑</div>
+        <div class="metric-card__text">
+          <h3 class="metric-card__title">Stronger Culture Visibility</h3>
+          <p class="metric-card__description">
+            Hybrid transparency, recognition systems, and community feeds
+            make cultural participation more visible across the organization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
     </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Charles Jayaseelan</strong> <span>All Rights Reserved</span>
-        </div>
-      </div>
+  <div class="container">
+    <div class="copyright">
+      <span>Copyright</span> 
+      <strong class="px-1 sitename">@charlesja</strong> 
+      <span>All Rights Reserved</span>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

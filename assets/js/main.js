@@ -79,15 +79,17 @@
   /**
    * Animation on scroll function and init
    */
-  function aosInit() {
+  document.addEventListener('DOMContentLoaded', function () {
+  if (typeof AOS !== 'undefined') {
     AOS.init({
-     duration: 800,
-  easing: 'cubic-bezier(.2,.8,.2,1)',
-  once: true,
-  mirror: false
+      duration: 800,
+      easing: 'cubic-bezier(.2,.8,.2,1)',
+      once: true,
+      mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
+});
+
 
   /**
    * Init typed.js
